@@ -86,6 +86,17 @@ router.get("/GET/Allinstructor", async (req,res) => {
       
   }
 })
+router.get("/GET/Student/:id", async(req,res) => {
+  const {id} = req.params;
+
+  try {
+      const student = await user.find({_id: id});
+
+      return res.json({result: student});
+  } catch (error) {
+      
+  }
+})
 
 
 
