@@ -1,5 +1,6 @@
 const express = require("express");
 const connection = require("./storage/db");
+const UserSchema = require("./model/UserSchema")
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
