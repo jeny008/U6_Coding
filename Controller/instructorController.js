@@ -8,4 +8,4 @@ class instructorController {
 
 }
 
-export default instructorController
+module.exports = instructorController

@@ -1,6 +1,6 @@
 
 
-class userController {
+class studentController {
 
     static addUser = (req, res) => {
 
@@ -8,4 +8,4 @@ class userController {
 
 }
 
-export default userController
+module.exports = studentController

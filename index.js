@@ -1,7 +1,7 @@
 const express = require("express");
 const connection = require("./storage/db");
 const router = require("./routes/router")
-const cookieparser = require("cookieparser")
+const cookieparser = require("cookie-parser")
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
