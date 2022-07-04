@@ -1,10 +1,13 @@
 const express = require("express");
 const connection = require("./storage/db");
-const UserSchema = require("./model/UserSchema")
+const router = require("./routes/router")
+const cookieparser = require("cookieparser")
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieparser());
+app.use("/", router)
 
 
 app.listen(8080, async () => {
