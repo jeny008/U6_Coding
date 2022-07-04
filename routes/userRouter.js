@@ -67,6 +67,26 @@ router.post("/register", async (req, res) => {
   }
 });
 
+router.get("/GET/AllStudents", async (req,res) => {
+  try {
+      const allStudents = await user.find({role:"student"});
+
+      return res.json({result: allStudents});
+  } catch (error) {
+      
+  }
+})
+
+router.get("/GET/Allinstructor", async (req,res) => {
+  try {
+      const Allinstructor = await user.find({role:"instructor"});
+
+      return res.json({result: Allinstructor});
+  } catch (error) {
+      
+  }
+})
+
 
 
 module.exports = router;
